@@ -26,14 +26,14 @@ def get_city_input():
         city = input('Please select a city: Chicago, New York City, or Washington:\n').strip().lower()
         if city in CITY_DATA:
             return city
-        print('Invalid selection. Choose from Chicago, New York City, or Washington.')
+        print('Please select a valid option: Chicago, New York City, or Washington.')
 
 def get_month_input():
     while True:
         month = input("Enter the month (all, January, February, ..., December): ").strip().lower()
         if month in ['all'] + list(MONTHS.keys()):
             return month
-        print('Invalid month. Please enter a valid month or "all".')
+        print('Please enter a valid month or choose "all" to select all months')
 
 def get_day_input():
     while True:
