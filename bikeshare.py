@@ -40,7 +40,7 @@ def get_day_input():
         day = input("Enter the day (all, Monday, Tuesday, ..., Sunday): ").strip().lower()
         if day in ['all'] + list(DAYS.keys()):
             return day
-        print('Invalid day. Please enter a valid day or "all".')
+        print('That day is not valid. Please enter a correct day or "all" for all days.')
 
 def load_data(city, month, day):
     print(f'\nLoading data for {city.title()}...')
