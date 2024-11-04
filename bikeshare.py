@@ -110,7 +110,7 @@ def display_data(df):
         print(df.iloc[start_loc:start_loc + 5])
         start_loc += 5
         if start_loc >= len(df):
-            print("There is no additional data to display")
+            print("There is no additional data to display.")
             break
 def main():
     while True:
