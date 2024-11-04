@@ -1,9 +1,7 @@
 
 # Basic Data Exploration with Pandas on Bikeshare Data
 _A Python project that utilizes pandas for analyzing bikeshare data._
-
 ## Project Overview
-
 This project demonstrates the use of the pandas library along with basic statistical methods to conduct a descriptive analysis of bikeshare data from three prominent U.S. cities: **Chicago, Washington, and New York City**. The analysis provides insights into popular travel times, stations, trip durations, and user demographics, revealing trends like the busiest times of day and frequently used stations. 
 
 ## Table of Contents
@@ -14,23 +12,17 @@ This project demonstrates the use of the pandas library along with basic statist
 - [Project Data](#project-data)
 - [Examples of Program Usage](#examples-of-program-usage)
 - [Acknowledgments](#acknowledgments)
-
 ## How to Run the Program
-
 To execute this program, enter the following command in your terminal:
 ```bash
 python bikeshare.py
 ```
-
 This guide assumes you're using **Anaconda's command prompt** on a **Windows 10 environment**. If using another environment, adjust the instructions accordingly. 
-
 ## Program Functionality
-
 Upon running the program, users will be prompted to:
 1. **Select a city** (Chicago, New York City, or Washington).
 2. **Specify a month** for data filtering (e.g., January), or choose 'all' to include all months.
 3. **Choose a day** of the week for filtering (e.g., Monday), or select 'all' to include all days.
-
 The program will then display the following insights based on user choices:
 - **Popular travel times**:
    - Most popular month

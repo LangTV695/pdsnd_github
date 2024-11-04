@@ -1,16 +1,13 @@
 import time
 import pandas as pd
-
 CITY_DATA = {
     'chicago': 'chicago.csv',
     'new york city': 'new_york_city.csv',
     'washington': 'washington.csv'
 }
-
 MONTHS = {month: index for index, month in enumerate(['january', 'february', 'march', 
               'april', 'may', 'june', 'july', 'august', 'september', 
               'october', 'november', 'december'], start=1)}
-
 DAYS = {day: index for index, day in enumerate(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'])}
 
 def get_filters():
