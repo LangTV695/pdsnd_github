@@ -6,13 +6,10 @@ CITY_DATA = {
     'new york city': 'new_york_city.csv',
     'washington': 'washington.csv'
 }
-
 MONTHS = {month: index for index, month in enumerate(['january', 'february', 'march', 
               'april', 'may', 'june', 'july', 'august', 'september', 
               'october', 'november', 'december'], start=1)}
-
 DAYS = {day: index for index, day in enumerate(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'])}
-
 def get_filters():
     print('Welcome to the bikeshare data analysis tool!')
     city = get_city_input()
@@ -20,37 +17,31 @@ def get_filters():
     day = get_day_input()
     print('-' * 40)
     return city, month, day
-
 def get_city_input():
     while True:
         city = input('Please select a city: Chicago, New York City, or Washington:\n').strip().lower()
         if city in CITY_DATA:
             return city
         print('Invalid selection. Choose from Chicago, New York City, or Washington.')
-
 def get_month_input():
     while True:
         month = input("Enter the month (all, January, February, ..., December): ").strip().lower()
         if month in ['all'] + list(MONTHS.keys()):
             return month
         print('Invalid month. Please enter a valid month or "all".')
-
 def get_day_input():
     while True:
         day = input("Enter the day (all, Monday, Tuesday, ..., Sunday): ").strip().lower()
         if day in ['all'] + list(DAYS.keys()):
             return day
         print('That day is not valid. Please enter a correct day or "all" for all days.')
-
 def load_data(city, month, day):
     print(f'\nLoading data for {city.title()}...')
     df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-
     if month != 'all':
         df = df[df['Start Time'].dt.month == MONTHS[month]]
         print(f'Filtered by month: {month.title()}')
-
     if day != 'all':
         df = df[df['Start Time'].dt.dayofweek == DAYS[day]]
         print(f'Filtered by day: {day.title()}')
@@ -116,7 +107,6 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
         calculate_time_stats(df)
         calculate_station_stats(df)
         calculate_trip_duration_stats(df)
